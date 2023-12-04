@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hockey Team Selection</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div>
+  <h2>Players</h2>
+  <div id="players-section" class="team-section" ondrop="drop(event, 'players-section')" ondragover="allowDrop(event)">
+    <!-- Players will be dynamically added here -->
+  </div>
+</div>
+
+<br>
+
+<div class="team-section">
+  <div class="individual-team-section">
+    <div id="team1-header" class="team-header">
+        Team 1
+    </div>
+    <div id="team1-players-section" class="team-player-list" ondrop="drop(event, 'team1-players-section')" ondragover="allowDrop(event)">
+      <!-- Team 1 players will be dynamically added here -->
+    </div>
+    <div id="team1-goalie-section" class="goalie-section" ondrop="drop(event, 'team1-goalie-section')" ondragover="allowDrop(event)">
+      <!-- Team 1 goalie will be dynamically added here -->
+    </div>
+  </div>
+  <!--Add horizontal space between two divs-->
+    <div class="horizontal-space"></div>
+  <div class="individual-team-section">
+    <div id="team2-header" class="team-header">
+        Team 2
+    </div>
+    <div id="team2-players-section" class="team-player-list" ondrop="drop(event, 'team2-players-section')" ondragover="allowDrop(event)">
+      <!-- Team 2 players will be dynamically added here -->
+    </div>
+    <div id="team2-goalie-section" class="goalie-section" ondrop="drop(event, 'team2-goalie-section')" ondragover="allowDrop(event)">
+      <!-- Team 2 goalie will be dynamically added here -->
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
