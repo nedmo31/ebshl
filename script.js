@@ -4,6 +4,15 @@ function calculateColor(value) {
     return `hsl(${hue}, 100%, 50%)`; // Convert to HSL format
 }
 
+function removePlayer(list, player) {
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].name === player.name) {
+            list.splice(i, 1);
+            break;
+        }
+    }
+}
+
 class Player {
     constructor(name, skating, offense, defense, goalie, grit) {
       this.name = name;
@@ -153,9 +162,7 @@ class Player {
 
     var team = teams.find(t => t.listDivID === sourceSection.id);
     if (team) {
-        const index = team.players.indexOf(player);
-        if (index > -1)
-            team.players.splice(index, 1);
+        removePlayer(team.players, player);
     } 
     team = teams.find(t => t.goalieDivID === sourceSection.id);
     if (team) {

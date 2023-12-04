@@ -6,7 +6,8 @@ body {
   }
 
   .team-section {
-    display: flex;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-around;
     background-color: #f2f2f2; /* Light gray background color */
     border-radius: 8px 8px 0 0; /* Rounded corners only at the top */
@@ -14,6 +15,7 @@ body {
     text-align: center;
     max-width: 900px;
     scroll-behavior: auto;
+    text-align: center;
   }
 
   .individual-team-section {
@@ -74,7 +76,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: rgb(0, 0, 0)b1b; /* White text color for team header */
+    color: rgb(0, 0, 0); /* White text color for team header */
   }
   
   .team-player-list {
